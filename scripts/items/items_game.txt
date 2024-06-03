@@ -3207,8 +3207,6 @@
 			"used_by_classes"
 			{
 				"demoman"	"1"
-				"soldier"	"1"
-				"heavy"	        "1"
 			}
 			"attributes"
 			{
