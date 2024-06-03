@@ -36,9 +36,6 @@
 						
 			// Next, add the customizable TF2V parameters in.
 			game+mod			"|gameinfo_path|customplayer/*"
-			
-			//  Load base TF2V assets.
-			game+mod+vgui				"|gameinfo_path|assets/base/*"
 
 			// Search loose files.  We'll set the directory containing the gameinfo.txt file
 			// as the first "mod" search path (after any user customizations). This is also the one
