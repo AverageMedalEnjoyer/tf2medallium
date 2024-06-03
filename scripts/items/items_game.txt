@@ -2221,7 +2221,7 @@
 			"propername"	"1"
 			"used_by_classes"
 			{
-				"pyro"	"1"
+				"pyro"	"0"
 			}
 			"static_attrs"
 			{
@@ -3201,14 +3201,22 @@
 			"item_logname"	"ullapool_caber"
 			"item_iconname"	"ullapool_caber"
 			"item_slot"	"melee"
+			"anim_slot" "MELEE_ALLCLASS"
 			"image_inventory" "backpack/workshop/weapons/c_models/c_caber/c_caber"
 			"model_player"	"models/workshop/weapons/c_models/c_caber/c_caber.mdl"
 			"used_by_classes"
 			{
 				"demoman"	"1"
+				"soldier"	"1"
+				"heavy"	        "1"
 			}
 			"attributes"
 			{
+				"mod crit while airborne"
+				{
+					"attribute_class"	"crit_while_airborne"
+					"value"	"1"
+				}
 				"crit mod disabled"
 				{
 					"attribute_class"	"mult_crit_chance"
@@ -5062,7 +5070,7 @@
 			{
 				"demoman"	"1"
 			}
-			"model_player"	"models/weapons/c_models/c_rocketboots_demo.mdl"
+			"model_player"	"models/weapons/c_models/c_rocketboots_soldier.mdl"
 		}
 		"140"
 		{
@@ -5681,51 +5689,6 @@
 				}
 			}
 		}
-		"237"
-		{
-			"name"	"Legacy Rocket Jumper"
-			"prefab"	"weapon_rocketlauncher"
-			"year"			"2010"
-			"item_quality" 			"unique"
-			"item_name"	"#TF_Weapon_RocketLauncher_Jump"
-			"item_description"	"#TF_Weapon_RocketLauncher_Jump_Desc"
-			"propername"	"0"
-			"image_inventory"	"backpack/weapons/c_models/c_rocketjumper/c_rocketjumper_legacy"
-			"model_player"	"models/weapons/c_models/c_rocketjumper/c_rocketjumper_legacy.mdl"
-			"attributes"
-			{
-				"damage penalty"
-				{
-					"attribute_class"	"mult_dmg"
-					"value"	"0"
-				}
-				"crit mod disabled"
-				{
-					"attribute_class"	"mult_crit_chance"
-					"value"	"0"
-				}
-				"no self blast dmg"
-				{
-					"attribute_class"	"no_self_blast_dmg"
-					"value" "2"
-				}
-				"maxammo primary increased"
-				{
-					"attribute_class"	"mult_maxammo_primary"
-					"value" "3.0"
-				}
-				"cannot pick up intelligence"
-				{
-					"attribute_class"	"cannot_pick_up_intelligence"
-					"value"				"1"
-				}
-			}
-			"visuals"
-			{
-				"sound_single_shot"		"Weapon_Rocket_Jumper.Single"
-				"sound_special1"		"Weapon_Rocket_Jumper.Explode"
-			}
-		}
 		"239"
 		{
 			"name"	"Gloves of Running Urgently"
@@ -5784,56 +5747,6 @@
 			"visuals_blu"
 			{
 				"skin"	"3"
-			}
-		}
-		"265"
-		{
-			"name"	"Legacy Stickybomb Jumper"
-			"prefab"	"weapon_stickybomb_launcher"
-			"year"			"2010"
-			"item_quality" 			"unique"
-			"item_name"	"#TF_Weapon_StickyBomb_Jump"
-			"item_description"	"#TF_Weapon_StickyBomb_Jump_Desc"
-			"propername"	"0"
-			"image_inventory"	"backpack/weapons/c_models/c_sticky_jumper/c_sticky_jumper_legacy"
-			"model_player"	"models/weapons/c_models/c_sticky_jumper/c_sticky_jumper_legacy.mdl"
-			"attributes"
-			{
-				"damage penalty"
-				{
-					"attribute_class"	"mult_dmg"
-					"value"	"0"
-				}
-				"crit mod disabled"
-				{
-					"attribute_class"	"mult_crit_chance"
-					"value"	"0"
-				}
-				"no self blast dmg"
-				{
-					"attribute_class"	"no_self_blast_dmg"
-					"value" "1"
-				}
-				"maxammo secondary increased"
-				{
-					"attribute_class"	"mult_maxammo_secondary"
-					"value" "3"
-				}
-				"cannot pick up intelligence"
-				{
-					"attribute_class"	"cannot_pick_up_intelligence"
-					"value"				"1"
-				}
-				"custom projectile model"
-				{
-					"attribute_class"	"custom_projectile_model"
-					"value"				"models/weapons/w_models/w_stickybomb2.mdl"
-				}
-			}
-			"visuals"
-			{
-				"sound_single_shot"	"Weapon_Sticky_Jumper.Single"
-				"sound_special1"	"Weapon_Sticky_Jumper.Explode"
 			}
 		}
 		"304"
@@ -7004,6 +6917,7 @@
 			"used_by_classes"
 			{
 				"soldier"	"1"
+				"demoman"	"primary"
 			}
 			"attributes"
 			{
@@ -8108,117 +8022,6 @@
 			"year"				"2012"
 			"item_quality" 			"unique"
 		}
-		"998"
-		{
-			"name"	"The Vaccinator"
-			"prefab"			"weapon_medigun"
-			"year"	"2012"
-			"item_quality" 			"unique"
-			"item_type_name"	"#TF_Weapon_Medigun_Resist"
-			"item_name"		"#TF_Unique_MediGun_Resist"
-			"item_description"	"#TF_Unique_MediGun_Resist_Desc"
-			"propername"		"1"
-			"equip_region"	"medigun_backpack"
-			"image_inventory"	"backpack/workshop/weapons/c_models/c_medigun_defense/c_medigun_defense"
-			"model_player"	"models/workshop/weapons/c_models/c_medigun_defense/c_medigun_defense.mdl"
-			"extra_wearable" "models/workshop/weapons/c_models/c_medigun_defense/c_medigun_defensepack.mdl"
-			"attributes"
-			{
-				"lunchbox adds minicrits"
-				{
-					"attribute_class"	"set_weapon_mode"
-					"value"	"3"
-				}
-				"ubercharge rate bonus"
-				{
-					"attribute_class"	"mult_medigun_uberchargerate"
-					"value"	"1.67"
-				}
-				"ubercharge overheal rate penalty"
-				{
-					"attribute_class"	"mult_medigun_overheal_uberchargerate"
-					"value"	"0.67"
-				}
-				"overheal fill rate reduced"
-				{
-					"attribute_class"	"overheal_fill_rate"
-					"value" "0.34"
-				}
-				"medigun charge is resists"
-				{
-					"attribute_class"	"set_charge_type"
-					"value"	"3"
-				}
-			}
-			"visuals"
-			{
-				"player_bodygroups"
-				{
-					"medic_backpack"			"1"
-				}
-			}
-			"visuals_red"
-			{
-				"skin" "0"
-			}
-			"visuals_blu"
-			{
-				"skin" "1"
-			}
-		}
-		"1098"
-		{
-			"name"	"The Classic"
-			"prefab"	"weapon_sniperrifle"
-			"year"		"2014"
-			"item_quality" 			"unique"
-			"item_class"	"tf_weapon_sniperrifle_classic"
-			"item_logname"	"the_classic"
-			"item_iconname"	"the_classic"
-			"item_name"	"#TF_ClassicSniperRifle"
-			"item_description"	"#TF_ClassicSniperRifle_Desc"
-			"propername"	"1"
-			"image_inventory"	"backpack/weapons/c_models/c_tfc_sniperrifle/c_tfc_sniperrifle"
-			"model_player"	"models/weapons/c_models/c_tfc_sniperrifle/c_tfc_sniperrifle.mdl"
-			"static_attrs"
-			{
-				"min_viewmodel_offset"		"5 0 -8"				
-			}
-			"attributes"
-			{
-				"crit on hard hit"
-				{
-					"attribute_class"	"crit_on_hard_hit"
-					"value"	"1"
-				}
-				"damage penalty on bodyshot"
-				{
-					"attribute_class"	"bodyshot_damage_modify"
-					"value"	"0.90"
-				}
-				"sniper no headshot without full charge"
-				{
-					"attribute_class"	"sniper_no_headshot_without_full_charge"
-					"value" "1"
-				}
-				"sniper crit no scope"
-				{
-					"attribute_class"	"sniper_crit_no_scope"
-					"value" "1"
-				}
-			}
-			"visuals"
-			{
-				"sound_single_shot"	"Weapon_ClassicSniperRifle.Single"
-				"sound_burst"	"Weapon_ClassicSniperRifle.SingleCrit"
-				"animation_replacement"
-				{
-					"ACT_PRIMARY_VM_INSPECT_START"	"ACT_PRIMARY_ALT1_VM_INSPECT_START"
-					"ACT_PRIMARY_VM_INSPECT_IDLE"	"ACT_PRIMARY_ALT1_VM_INSPECT_IDLE"
-					"ACT_PRIMARY_VM_INSPECT_END"	"ACT_PRIMARY_ALT1_VM_INSPECT_END"
-				}
-			}
-		}
 		"1099"
 		{
 			"name"			"The Tide Turner"
@@ -8458,20 +8261,20 @@
 			"year"			"2017"
 			"item_quality" 			"unique"
 		}
-		"1179"
-		{
-			"name"			"The Thermal Thruster"
-			"prefab"		"weapon_rocketpack"
-			"year"			"2017"
-			"item_quality" 			"unique"
-		}
-		"1180"
-		{
-			"name"			"The Gas Passer"
-			"prefab"		"weapon_gascan"
-			"year"			"2017"
-			"item_quality" 			"unique"
-		}
+		//"1179"
+		//{
+		//	"name"			"The Thermal Thruster"
+		//	"prefab"		"weapon_rocketpack"
+		//	"year"			"2017"
+		//	"item_quality" 			"unique"
+		//}
+		//"1180"
+		//{
+		//	"name"			"The Gas Passer"
+		//	"prefab"		"weapon_gascan"
+		//	"year"			"2017"
+		//	"item_quality" 			"unique"
+		//}
 		"1181"
 		{
 			"name"			"The Hot Hand"
